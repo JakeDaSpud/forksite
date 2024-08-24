@@ -1,0 +1,132 @@
+:root {
+	--bg_colour: #0f0b07;
+	
+	--primary: #d4bfa3;
+	--secondary: #397579;
+	--accent: #6e6fbb;
+	
+	--text: #f6f2ec;
+	
+	--link_colour: var(--primary);
+	--link_highlight: var(--text);
+}
+
+a {
+	color: var(--link_colour);
+}
+
+a:hover {
+	color: var(--link_highlight);
+}
+
+
+
+html {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	font-family: cascadia code;
+}
+
+
+
+hr {
+	margin: 20px;
+	border: default;
+	
+	width: 95%;
+	
+	border-color: var(--bg_colour);
+	filter: brightness(0.8);
+}
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	
+	background-color: var(--bg_colour);
+	
+	width: 70%;
+}
+
+
+
+p, span {
+	color: var(--text);
+}
+
+
+
+header {
+	border-radius: 5px;
+	margin: 5px;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	height: 20vh;
+}
+
+header img {
+	height: 6vh;
+	margin-right: 1vw;
+}
+
+header h1 {
+	font-size: 64px;
+	color: var(--primary);
+	text-shadow: var(--secondary) 4px 4px;
+}
+
+
+
+nav {
+	background-color: var(--secondary);
+	
+	width: fit-content;
+	
+	border-radius: 5px;
+	margin: 5px;
+	padding: 0 20px;
+}
+
+nav h1 {
+	color: var(--primary);
+	text-shadow: var(--bg_colour) 2px 2px;
+}
+
+
+
+.project-section {
+	border-radius: 5px;
+	margin: 5px;
+	padding: 10px 20px;
+	background-color: var(--secondary);
+}
+
+.project-section h1 {
+	color: var(--primary);
+	text-shadow: var(--bg_colour) 2px 2px;
+}
+
+
+
+footer {
+	border-radius: 5px;
+	margin: 5px auto;
+	padding: 10px 20px;
+	
+	background-color: var(--secondary);
+	
+	width: 80%;
+	text-align:center;
+}
