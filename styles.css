@@ -11,12 +11,28 @@
 	--link_highlight: var(--text);
 }
 
+
+
 a {
 	color: var(--link_colour);
 }
 
 a:hover {
 	color: var(--link_highlight);
+}
+
+hr {
+	margin: 20px;
+	border: default;
+	
+	width: 95%;
+	
+	border-color: var(--bg_colour);
+	filter: brightness(0.8);
+}
+
+p, span {
+	color: var(--text);
 }
 
 
@@ -35,18 +51,6 @@ html {
 
 
 
-hr {
-	margin: 20px;
-	border: default;
-	
-	width: 95%;
-	
-	border-color: var(--bg_colour);
-	filter: brightness(0.8);
-}
-
-
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -57,10 +61,10 @@ body {
 	width: 70%;
 }
 
-
-
-p, span {
-	color: var(--text);
+@media (max-width: 1000px) {
+	body {
+		width: 90%;
+	}
 }
 
 
@@ -73,18 +77,27 @@ header {
 	flex-direction: row;
 	align-items: center;
 
-	height: 20vh;
+	height: fit-content;
 }
 
 header img {
-	height: 6vh;
+	height: 4rem;
+	max-height: 8rem;
 	margin-right: 1vw;
 }
 
 header h1 {
-	font-size: 64px;
+	font-size: 4rem;
 	color: var(--primary);
-	text-shadow: var(--secondary) 4px 4px;
+	text-shadow: var(--secondary) 0.25rem 0.25rem;
+}
+
+@media (max-width: 1000px) {
+	header h1 {
+		font-size: 2rem;
+		color: var(--primary);
+		text-shadow: var(--secondary) 0.175rem 0.175rem;
+	}
 }
 
 
@@ -122,7 +135,7 @@ nav h1 {
 
 footer {
 	border-radius: 5px;
-	margin: 5px auto;
+	margin: 5px auto 200px auto;
 	padding: 10px 20px;
 	
 	background-color: var(--secondary);
